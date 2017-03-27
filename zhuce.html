@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="css/zhuce.css" type="text/css">
+    <style>
+        input{position: relative;}
+    </style>
+</head>
+<body>
+
+
+
+<div class="warp">
+    <div class="header">
+        <a href="denglu.html"></a>
+        <a href="#"></a>
+    </div>
+    <div class="main">
+        <div class="ma_l">
+            <img src="image/denglu/denglu-pic01.png" class="m_img">
+            <p class="m_p">有范&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;是一种生活态度</p>
+        </div>
+
+        <div class="ma_z"></div>
+
+        <div class="ma_r">
+            <p class="r_p">注册</p>
+
+            <form  class="ma_f"  action="" name="infos" id="infos" >
+                <span class="sp_1"></span>
+                <span class="sp_2"></span>
+
+                <input type="text" name="username" id="username"  placeholder="用户名长度必须为6-10位">
+                <input type="password" name="pwd" id="pwd" placeholder="密码长度在6-10之间">
+                <input type="password" name="pwds" id="pwds" placeholder="确认密码">
+                <input type="tel" name="tel" id="tel" placeholder="手机号码">
+                <input type="submit" value="注册" class="in_s" >
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function(){
+        $("#infos").validate({
+            debug:false,
+            onkeyup:false,
+            rules:{
+                username:{
+                    required:true,
+                    rangelength:[6,16]
+                },
+                pwd:{
+                    required:true,
+                    rangelength:[6,16]
+                },
+                pwds:{
+                    required:true,
+                    rangelength:[6,16],
+                    equalTo:"#pwd"
+                },
+                tel:{
+                    digits:true,
+                    required:true,
+                    rangelength:[11,11]
+                },
+
+            },
+            messages:{
+                username:{
+                    required:"用户名必填",
+                    rangelength:"用户名长度必须为6-16位"
+                },
+                pwd:{
+                    required:"密码必填",
+                    rangelength:"密码长度必须为6-16位"
+                },
+                pwds:{
+                    required:"密码必填",
+                    rangelength:"密码长度必须为6-16位",
+                    equalTo: "两次密码输入不一致",
+
+                },
+                tel:{
+                    digits:"必须是整数",
+                    required:"电话号码必填",
+                    rangelength:"电话长度必须为11位"
+                }
+
+            },
+            submitHandler:function(form){
+//                console.log(123);
+                $.ajax({
+                    url:"http://www.petrichoro.com/ports/index.php/Home/User/regist",
+                    data:{
+                        user:$("#username").val(),
+                        psd:$("#pwd").val(),
+                        phone:$("#tel").val()
+                    },
+                    dataType:"jsonp",
+                    type:"post",
+                    async:true,
+                    success:function(val){
+                        console.log(val);
+                        $.each(val,function(m,n){
+                            console.log(n);
+                            if(n==="用户名已存在"){
+                                $(".sp_1").html(n);
+                            }
+                            if(n==="请填写正确格式的手机号。"){
+                                $(".sp_2").html(n);
+                            }
+                            if(n==="注册成功"){
+                                alert("恭喜你注册成功");
+                                location.href="./denglu.html"
+                            }
+                        })
+                    }
+
+                })
+            }
+
+
+        })
+
+
+    })
+</script>
+
+</body>
+</html>

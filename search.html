@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/shop.js"></script>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/search.css"/>
+    <title>搜索</title>
+</head>
+<body>
+<div class="warp">
+    <div class="header">
+        <a href="#"></a>
+
+        <div id="sou">
+            <input type="text" >
+            <button></button>
+        </div>
+
+    </div>
+    <div class="kuang">
+        <p class="k_p"><a href="./index.html" base="_self">首页</a></p>
+        <p><a href="./fenlei.html" base="_self">分类</a></p>
+        <p><a href="./index.html" base="_self">搭配</a></p>
+        <p><a href="./xiangqing.html" base="_self">详情</a></p>
+        <p><a href="./search.html" base="_self">搜索</a></p>
+        <p><a href="./denglu.html" base="_self">登录</a></p>
+        <p><a href="./my.html" base="_self">我的</a></p>
+        <p><a href="./gouwudai.html" base="_self">购物袋</a></p>
+    </div>
+
+    <div id="main">
+
+        <div class="box">
+            <div class="titl"></div>
+
+            <div class="news">
+                <ul>
+                    <li>日期</li>
+                    <li>风向</li>
+                    <li>高温</li>
+                    <li>天气</li>
+                    <li>低温</li>
+                    <li>日期</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script>
+        $(function(){
+            $("#sou button").click(function(){
+               var _$this= $("#sou :text").val();
+                $('.box').show();
+                $.ajax({
+                    url:"http://wthrcdn.etouch.cn/weather_mini?city="+_$this,
+                    type:'get',
+                    data:{},
+                    dataType:'json',
+                    async:true,
+                    success:function(data){
+                        console.log(data);
+                        $.each(data,function(i,j){
+                            var str='';
+                            var sum='';
+                            $('.titl').html(j.ganmao);
+                            $.each(j.yesterday,function(k,l){
+                                str+='<li>'+l+'</li>';
+                            });
+                            $('.news ul').html(str);
+                            $.each(j.forecast,function(a,b){
+                                console.log(b);
+                                $.each(b,function(n,m){
+                                    sum+='<li>'+m+'</li>';
+                                });
+                                $('.news ul').html(sum);
+                            })
+                        })
+                    }
+                })
+            })
+        })
+    </script>
+</div>
+</body>
+</html>

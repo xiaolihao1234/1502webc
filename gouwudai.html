@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>购物袋</title>
+    <script src="js/jquery-3.1.1.js"></script>
+    <link type="text/css" href="css/gouwudai.css" rel="stylesheet">
+    <script src="js/gouwudai.js"></script>
+</head>
+<body>
+
+<div class="warp">
+    <div class="header">
+        <a href="index.html"></a>
+        <a href="#">购物袋</a>
+        <a href="#" class="sao"></a>
+        <a href="search.html"></a>
+        <a href="#"></a>
+    </div>
+
+    <div id="logo">
+        <h3></h3>
+        <span id="l_sp">我的购物袋</span>
+        <h6 id="l_h6">MY SHOPPNG BAG</h6>
+
+        <div  class="lo_d">
+            <div class="d1" style="background: black"></div>
+            <div class="d2"></div>
+            <div class="d1"></div>
+            <div class="d2"></div>
+            <div class="d1"></div>
+        </div>
+
+        <span class="sp_l" id="spl1">查看购物袋</span>
+        <span class="sp_l" id="spl2">填写订单</span>
+        <span class="sp_l" id="spl3">完成购买</span>
+    </div>
+
+
+        <table border="1px" cellpadding="0" cellspacing="0" class="ta_ble">
+            <tr style="background: black; color: white; height: 50px">
+                <th width="300px">商品信息</th>
+                <th width="140px">单价(元)</th>
+                <th width="120px">数量</th>
+                <th>返范票</th>
+                <th width="150px">小计(元)</th>
+                <th width="200px">操作</th>
+            </tr>
+            <tr style="height: 120px;">
+                <td>
+                    <input type="checkbox" class="c_xuan">
+                    <img src="image/fenlei/fenlei-nanzhuang02.png" class="c_img">
+                    <h4 class="c_h4">Life After Life袋鼠兜纯色七分袖衬衫</h4>
+                    <p class="c_p1">颜色：<span>黑色</span></p>
+                    <p class="c_p2">尺码：<span>XXL</span></p>
+                </td>
+                <td>
+                    <span class="td2_sp">￥<span id="t_dan1">199.00</span></span>
+                </td>
+                <td>
+                    <button class="td3_b1" id="tjian1">-</button>
+                    <span class="td3_sp" id="tshu1">1</span>
+                    <button class="td3_b2" id="tjia1">+</button>
+                </td>
+                <td>
+                    <span class="td4_sp">0</span>
+                </td>
+                <td>
+                       <span class="td2_sp">￥<span id="t_qian1">199</span>.00</span>
+                </td>
+                <td>
+                     <button class="td5_b1" id="tdel_1">删除</button>
+                     <button class="td5_b2">移入收藏</button>
+                </td>
+            </tr>
+
+
+            <tr style="height: 120px;">
+                <td>
+                    <input type="checkbox" class="c_xuan">
+                    <img src="image/fenlei/fenlei-nanzhuang01.png" class="c_img">
+                    <h4 class="c_h4">Life After Life袋鼠兜纯色七分袖衬衫</h4>
+                    <p class="c_p1">颜色：<span>黑色</span></p>
+                    <p class="c_p2">尺码：<span>XXL</span></p>
+                </td>
+                <td>
+                    <span class="td2_sp">￥<span id="t_dan2">299.00</span></span>
+                </td>
+                <td>
+                    <button class="td3_b1" id="tjian2">-</button>
+                    <span class="td3_sp" id="tshu2">1</span>
+                    <button class="td3_b2" id="tjia2">+</button>
+                </td>
+                <td>
+                    <span class="td4_sp">0</span>
+                </td>
+                <td>
+                    <span class="td2_sp">￥<span id="t_qian2">299</span>.00</span>
+                </td>
+                <td>
+                    <button class="td5_b1" id="tdel_2">删除</button>
+                    <button class="td5_b2">移入收藏</button>
+                </td>
+            </tr>
+
+
+
+            <tr style="height: 120px;">
+                <td>
+                    <input type="checkbox" class="c_xuan">
+                    <img src="image/fenlei/fenlei-nanzhuang03.png" class="c_img">
+                    <h4 class="c_h4">Life After Life袋鼠兜纯色七分袖衬衫</h4>
+                    <p class="c_p1">颜色：<span>黑色</span></p>
+                    <p class="c_p2">尺码：<span>XXL</span></p>
+                </td>
+                <td>
+                    <span class="td2_sp">￥<span id="t_dan3">399.00</span></span>
+                </td>
+                <td>
+                    <button class="td3_b1" id="tjian3">-</button>
+                    <span class="td3_sp" id="tshu3">1</span>
+                    <button class="td3_b2" id="tjia3">+</button>
+                </td>
+                <td>
+                    <span class="td4_sp">0</span>
+                </td>
+                <td>
+                    <span class="td2_sp">￥<span id="t_qian3">399</span>.00</span>
+                </td>
+                <td>
+                    <button class="td5_b1" id="tdel_3">删除</button>
+                    <button class="td5_b2">移入收藏</button>
+                </td>
+            </tr>
+
+        </table>
+
+
+    <div class="q_pi">
+        <p class="q_pq1"><input type="checkbox" class="ch_q">&nbsp;&nbsp;<span>全选</span></p>
+        <button class="q_pb1">批量删除</button>
+        <button class="q_pb2">批量移入收藏夹</button>
+        <p class="q_pq2">商品总价:<span class="q2_sp">￥999.00</span>元</p>
+
+    </div>
+
+    <div class="zaiG">
+        <a><button class="za_b1">再逛逛</button></a>
+        <a><button class="za_b2">去结算</button></a>
+
+    </div>
+
+<div class="chou_D">
+    <div class="cd_h4">-</div>
+    <p class="sd_p">凑单商品</p>
+    <button class="ch_db1"></button>
+    <button class="ch_db2"></button>
+</div>
+    <ul class="footer">
+        <li><img src="image/dapei/dapei-fugu01.png"></li>
+        <li><img src="image/dapei/dapei-fugu02.png"></li>
+        <li><img src="image/dapei/dapei-fugu03.png"></li>
+        <li><img src="image/dapei/dapei-fugu04.png"></li>
+        <li><img src="image/dapei/dapei-fugu05.png"></li>
+        <li style="margin-right: -18px;"><img src="image/dapei/dapei-fugu06.png"></li>
+    </ul>
+    </div>
+
+
+</body>
+</html>

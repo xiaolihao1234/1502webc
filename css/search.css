@@ -1,0 +1,52 @@
+#sou{
+    top: 10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    height: 25px;
+    border: 1px solid white;
+
+
+}
+#sou input{
+    color: white;
+    width: 260px;
+    height: 25px;
+    background: #323333;
+    float: left;
+    border: none;
+}
+#sou button{
+    background: #323333;
+    border: none;
+    width: 30px;
+    height: 25px;
+    background-image: url("../image/icon.png");
+    background-position:0 -100px;
+    float: right;
+
+}
+#sou button:hover{background-image: url("../image/icon.png");background-position:150px -100px;}
+
+
+#main{
+    float: left;
+    width: 1015px;height: 400px;
+    background: url("../image/sousuo/sousuo-bg.png");
+}
+
+
+*{margin: 0;padding: 0;list-style: none;}
+.box{width: 500px;height: 400px; margin: 100px auto 0;border:1px solid black;display: none;}
+.titl{font-size: 14px;width: 500px;height: 40px;border: 1px solid black;color: #00b7ee;}
+li{display: block;float: left;border: 1px solid green;width:80px;text-align: center;}
+li:nth-child(1){background: bisque;}
+li:nth-child(2){background: bisque;}
+li:nth-child(3){background: bisque;}
+li:nth-child(4){background: bisque;}
+li:nth-child(5){background: bisque;}
+li:nth-child(6){background: bisque;}
+li span{display: inline-block;width:50px;height: 40px;text-align: center;line-height: 40px;}
+.news{}
+

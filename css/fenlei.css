@@ -1,0 +1,71 @@
+.xuan{
+    width: 1015px;
+    height: 50px;
+    border-bottom:2px solid grey;
+    text-align: center;
+}
+
+.xuan button{
+    height: 49px;
+    width: 13%;
+    border: none;
+    background: none;
+
+}
+
+
+.xuan button:hover{
+    border-bottom: 4px solid black;
+    color: yellow;
+}
+
+#xiLie{
+    width: 1015px;
+    height: 600px;
+
+
+
+}
+#xiLie div{
+    width: 1015px;
+    height: 600px;
+    display: none;
+}
+#xiLie div dl{
+    width: 20%;
+    height: 50%;
+    float: left;
+    margin: 0 2% 0 3%;
+    text-align: center;
+}
+#xiLie div dl dd{
+    width: 100%;
+    height: 85%;
+    float: left;
+    overflow: hidden;
+}
+#xiLie div dl dt{
+    width: 100%;
+    float: left;
+}
+#xiLie div dl dd img{
+    width: 100%;
+    height: 100%;
+
+}
+#xiLie div dl dd img:hover{
+   transform: scale(1.5);
+    transition: 1s;
+}
+
+#xiLie .bg{
+    display: block;
+}
+
+
+
+
+
+
+
+
